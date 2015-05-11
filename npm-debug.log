@@ -1,0 +1,191 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\nodejs\\\\node.exe',
+1 verbose cli   'D:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'morgon',
+1 verbose cli   'body-parser',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose node symlink D:\nodejs\\node.exe
+5 warn package.json Mean@1.0.0 No repository field.
+6 warn package.json Mean@1.0.0 No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'morgon', null ]
+9 verbose cache add name=undefined spec="morgon" args=["morgon",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'morgon',
+10 verbose parsed url   path: 'morgon',
+10 verbose parsed url   href: 'morgon' }
+11 verbose cache add [ 'body-parser', null ]
+12 verbose cache add name=undefined spec="body-parser" args=["body-parser",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'body-parser',
+13 verbose parsed url   path: 'body-parser',
+13 verbose parsed url   href: 'body-parser' }
+14 silly lockFile f982a41b-morgon morgon
+15 verbose lock morgon C:\Users\bandari\AppData\Roaming\npm-cache\f982a41b-morgon.lock
+16 silly lockFile 14cf125c-body-parser body-parser
+17 verbose lock body-parser C:\Users\bandari\AppData\Roaming\npm-cache\14cf125c-body-parser.lock
+18 silly lockFile f982a41b-morgon morgon
+19 silly lockFile f982a41b-morgon morgon
+20 silly lockFile 14cf125c-body-parser body-parser
+21 silly lockFile 14cf125c-body-parser body-parser
+22 verbose addNamed [ 'morgon', '' ]
+23 verbose addNamed [ null, '*' ]
+24 silly lockFile 27af42bc-morgon morgon@
+25 verbose lock morgon@ C:\Users\bandari\AppData\Roaming\npm-cache\27af42bc-morgon.lock
+26 verbose addNamed [ 'body-parser', '' ]
+27 verbose addNamed [ null, '*' ]
+28 silly lockFile 9f665704-body-parser body-parser@
+29 verbose lock body-parser@ C:\Users\bandari\AppData\Roaming\npm-cache\9f665704-body-parser.lock
+30 silly addNameRange { name: 'morgon', range: '*', hasData: false }
+31 verbose request where is /morgon
+32 verbose request registry https://registry.npmjs.org/
+33 verbose request id 4000be0f82a6e776
+34 verbose url raw /morgon
+35 verbose url resolving [ 'https://registry.npmjs.org/', './morgon' ]
+36 verbose url resolved https://registry.npmjs.org/morgon
+37 verbose request where is https://registry.npmjs.org/morgon
+38 info trying registry request attempt 1 at 17:13:44
+39 http GET https://registry.npmjs.org/morgon
+40 silly addNameRange { name: 'body-parser', range: '*', hasData: false }
+41 verbose request where is /body-parser
+42 verbose request registry https://registry.npmjs.org/
+43 verbose url raw /body-parser
+44 verbose url resolving [ 'https://registry.npmjs.org/', './body-parser' ]
+45 verbose url resolved https://registry.npmjs.org/body-parser
+46 verbose request where is https://registry.npmjs.org/body-parser
+47 info trying registry request attempt 1 at 17:13:44
+48 verbose etag "9F5OOY7M0AG2U5E6NXNEY6MHR"
+49 http GET https://registry.npmjs.org/body-parser
+50 http 304 https://registry.npmjs.org/body-parser
+51 silly registry.get cb [ 304,
+51 silly registry.get   { date: 'Mon, 11 May 2015 21:13:44 GMT',
+51 silly registry.get     via: '1.1 varnish',
+51 silly registry.get     'cache-control': 'max-age=60',
+51 silly registry.get     etag: '"9F5OOY7M0AG2U5E6NXNEY6MHR"',
+51 silly registry.get     age: '48',
+51 silly registry.get     connection: 'keep-alive',
+51 silly registry.get     'x-served-by': 'cache-atl6227-ATL',
+51 silly registry.get     'x-cache': 'HIT',
+51 silly registry.get     'x-cache-hits': '1',
+51 silly registry.get     'x-timer': 'S1431378824.738842,VS0,VE1',
+51 silly registry.get     vary: 'Accept' } ]
+52 verbose etag https://registry.npmjs.org/body-parser from cache
+53 silly addNameRange number 2 { name: 'body-parser', range: '*', hasData: true }
+54 silly addNameRange versions [ 'body-parser',
+54 silly addNameRange   [ '1.0.0',
+54 silly addNameRange     '1.0.1',
+54 silly addNameRange     '1.0.2',
+54 silly addNameRange     '1.1.0',
+54 silly addNameRange     '1.1.1',
+54 silly addNameRange     '1.1.2',
+54 silly addNameRange     '1.2.0',
+54 silly addNameRange     '1.2.1',
+54 silly addNameRange     '1.2.2',
+54 silly addNameRange     '1.3.0',
+54 silly addNameRange     '1.3.1',
+54 silly addNameRange     '1.4.0',
+54 silly addNameRange     '1.4.1',
+54 silly addNameRange     '1.4.2',
+54 silly addNameRange     '1.4.3',
+54 silly addNameRange     '1.5.0',
+54 silly addNameRange     '1.5.1',
+54 silly addNameRange     '1.5.2',
+54 silly addNameRange     '1.6.0',
+54 silly addNameRange     '1.6.1',
+54 silly addNameRange     '1.6.2',
+54 silly addNameRange     '1.6.3',
+54 silly addNameRange     '1.6.4',
+54 silly addNameRange     '1.6.5',
+54 silly addNameRange     '1.6.6',
+54 silly addNameRange     '1.6.7',
+54 silly addNameRange     '1.7.0',
+54 silly addNameRange     '1.8.0',
+54 silly addNameRange     '1.8.1',
+54 silly addNameRange     '1.8.2',
+54 silly addNameRange     '1.8.3',
+54 silly addNameRange     '1.8.4',
+54 silly addNameRange     '1.9.0',
+54 silly addNameRange     '1.9.1',
+54 silly addNameRange     '1.9.2',
+54 silly addNameRange     '1.9.3',
+54 silly addNameRange     '1.10.0',
+54 silly addNameRange     '1.10.1',
+54 silly addNameRange     '1.10.2',
+54 silly addNameRange     '1.11.0',
+54 silly addNameRange     '1.12.0',
+54 silly addNameRange     '1.12.1',
+54 silly addNameRange     '1.12.2',
+54 silly addNameRange     '1.12.3',
+54 silly addNameRange     '1.12.4' ] ]
+55 verbose addNamed [ 'body-parser', '1.12.4' ]
+56 verbose addNamed [ '1.12.4', '1.12.4' ]
+57 silly lockFile b06c8939-body-parser-1-12-4 body-parser@1.12.4
+58 verbose lock body-parser@1.12.4 C:\Users\bandari\AppData\Roaming\npm-cache\b06c8939-body-parser-1-12-4.lock
+59 http 404 https://registry.npmjs.org/morgon
+60 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+60 verbose headers   'content-type': 'application/json',
+60 verbose headers   'cache-control': 'max-age=0',
+60 verbose headers   'content-length': '51',
+60 verbose headers   'accept-ranges': 'bytes',
+60 verbose headers   date: 'Mon, 11 May 2015 21:13:44 GMT',
+60 verbose headers   via: '1.1 varnish',
+60 verbose headers   age: '0',
+60 verbose headers   connection: 'keep-alive',
+60 verbose headers   'x-served-by': 'cache-atl6223-ATL',
+60 verbose headers   'x-cache': 'MISS',
+60 verbose headers   'x-cache-hits': '0',
+60 verbose headers   'x-timer': 'S1431378824.764063,VS0,VE31' }
+61 silly registry.get cb [ 404,
+61 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+61 silly registry.get     'content-type': 'application/json',
+61 silly registry.get     'cache-control': 'max-age=0',
+61 silly registry.get     'content-length': '51',
+61 silly registry.get     'accept-ranges': 'bytes',
+61 silly registry.get     date: 'Mon, 11 May 2015 21:13:44 GMT',
+61 silly registry.get     via: '1.1 varnish',
+61 silly registry.get     age: '0',
+61 silly registry.get     connection: 'keep-alive',
+61 silly registry.get     'x-served-by': 'cache-atl6223-ATL',
+61 silly registry.get     'x-cache': 'MISS',
+61 silly registry.get     'x-cache-hits': '0',
+61 silly registry.get     'x-timer': 'S1431378824.764063,VS0,VE31' } ]
+62 silly lockFile 27af42bc-morgon morgon@
+63 silly lockFile 27af42bc-morgon morgon@
+64 silly lockFile b06c8939-body-parser-1-12-4 body-parser@1.12.4
+65 silly lockFile b06c8939-body-parser-1-12-4 body-parser@1.12.4
+66 silly lockFile 9f665704-body-parser body-parser@
+67 silly lockFile 9f665704-body-parser body-parser@
+68 error 404 404 Not Found: morgon
+68 error 404
+68 error 404 'morgon' is not in the npm registry.
+68 error 404 You should bug the author to publish it
+68 error 404 It was specified as a dependency of 'Mean'
+68 error 404
+68 error 404 Note that you can also install from a
+68 error 404 tarball, folder, or http url, or git url.
+69 error System Windows_NT 6.2.9200
+70 error command "D:\\nodejs\\\\node.exe" "D:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "morgon" "body-parser" "--save"
+71 error cwd D:\Node Projects\Mean
+72 error node -v v0.10.35
+73 error npm -v 1.4.28
+74 error code E404
+75 verbose exit [ 1, true ]
