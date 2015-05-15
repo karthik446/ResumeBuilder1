@@ -1,6 +1,8 @@
 .panel.panel-primary
-   .panel-heading.text-center Projects
-   .panel-body
-      .row(ng-repeat="project in projects")
-         .col-md-6
-          a(href="/projects/{{project._id}}") {{project.clientName}}
+   .panel-heading Projects
+        .panel-body
+            .row(ng-repeat="project in projects")
+                .col-md-6
+                    a.text-left(href="/projects/{{project._id}}") {{project.clientName}}
+                .col-md-6
+                    div {{project.role}}

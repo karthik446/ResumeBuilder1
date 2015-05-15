@@ -16,6 +16,7 @@ angular.module('app').factory('summary',function(){
                 'Experience in development and implementation of Windows Communication Foundation (WCF), and also Responsible for developing WCF based Service, Data, Fault and Message Contracts',
                 'Expertise in ASP.NET MVC 5.0/4.0/3.0 in implementing Model, View And Controllers with State Management, Security, Action methods, Attribute Routing, Action Filters',
                 'Extensive working experience in working with Agile (SCRUM), Waterfall and TDD',
+                'Working experience of MEAN stack development, testing and deployment to heroku',
                 'Experience in designing Databases in SQL Server 2012/2008/2005 & Oracle 11g which includes writing Stored Procs, User Defined Functions and Triggers using T-SQL'
             ];
         }

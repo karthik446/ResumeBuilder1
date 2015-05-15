@@ -4,8 +4,6 @@
 
 var  mongoose = require('mongoose');
 
-
-
 var projectSchema = mongoose.Schema({
     projectName:{type:String, required:'{PATH} is required'},
     role:{type:String, required:'{PATH} is required'},
