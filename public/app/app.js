@@ -7,10 +7,11 @@ angular.module('app').config(function($routeProvider,$locationProvider){
      enabled: true,
      requireBase: false
     });
-    $routeProvider.when("/",{templateUrl:"/partials/main", controller:"mainCtrl"});
-});
-
-angular.module('app').controller('mainCtrl',function($scope){
-    $scope.myvar ="Hello from Angular";
-    $scope.dude ="Dudeee";
+    $routeProvider
+        .when("/",{templateUrl:"/partials/main/main",
+            controller:"mainController"})
+        .when("/projects",{templateUrl:"/partials/projects/project-list",
+            controller:"projectsController"})
+        .when("/projects/:id",{templateUrl:"/partials/projects/project-details",
+            controller:"projectDetailsController"});
 });

@@ -3,71 +3,51 @@
  */
 
 var express = require("express"),
-    stylus = require("stylus"),
-    logger = require("morgan"),
-    bodyParser = require("body-parser"),
-    mongoose = require("mongoose");
+    passport = require("passport"),
+    mongoose = require("mongoose"),
+    localStrategy = require("passport-local").Strategy,
+    app = express();
 
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+var config= require('./server/config/config')[env]
 
-var app = express();
+require('./server/config/express')(app,config);
+require('./server/config/mongoose')(config);
+require('./server/config/routes')(app);
 
-function compile(str,path){
-    return stylus(str).set('filename',path);
-}
 
-app.set('views',__dirname + '/server/views');
+var User = mongoose.model("User");
+passport.use(new localStrategy(
 
-app.set('view engine','jade');
-
-app.use(logger('dev'));
-app.use(bodyParser());
-
-app.use(stylus.middleware(
-    {
-        src:__dirname +'/public',
-        compile:compile
+    function(username, password, done){
+        User.findOne({userName: username}).exec(function(err, user){
+            return user && user.authenticate(password)
+                ?  done(null, user)
+                : done(null, false);
+        })
     }
 ));
 
-app.use(express.static(__dirname +'/public'));
-
-//Mongo DB
-
-if(env=='development') {
-    mongoose.connect('mongodb://localhost/mean');
-}
-else {
-    mongoose.connect('mongodb://kar446:meanproject@ds045511.mongolab.com:45511/mean');
-}
-
-var db = mongoose.connection;
-db.on('error',console.error.bind(console,'connection failed...'));
-db.once('open', function callback(){
-    console.log('mean Beginner db opened');
+app.use(function(req, res, next){
+    console.log("hello " + req.user);
+    next();
 });
 
-
-var messageSchema = mongoose.Schema({message:String});
-var Message = mongoose.model('Message',messageSchema);
-var mongoMessage;
-
-Message.findOne().exec(function(error,messageDoc){
-    mongoMessage = messageDoc.message;
-    console.log("found one " + messageDoc.message);
+//Tell the passport to Serialize user...
+passport.serializeUser(function(user,done){
+    if(user){
+        done(null, user._id);
+    }
 });
 
-app.get('/partials/:partialPath',function(req, res) {
-    res.render('partials/'+ req.params.partialPath);
-});
+passport.deserializeUser(function(id, done){
 
-app.get('*',function(req,res){
-    res.render('index',{
-        mm: 'ABASC',
-        dude:mongoMessage
+    User.findOne({_id:id}).exec(function(err, user){
+        //if there is a user we call the done method...
+        //who calls the deserialize??? and whats the done method ?
+        return user ?  done(null, user) : done(null, false);
     });
 });
 
-app.listen(process.env.PORT || 3000);
-
-console.log("Listening on Port " + process.env.PORT + "...");
+app.listen(config.port);
+console.log("Listening on Port " +config.port + "...");

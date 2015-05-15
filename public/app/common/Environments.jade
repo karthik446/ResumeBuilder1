@@ -1,0 +1,11 @@
+.panel.panel-primary.env
+   .panel-heading Environments
+      .panel-body
+         .row
+            .col-md-6
+               button.btn.btn-primary(ng-repeat="stack in project.stacks", ng-click='showStackSkills(stack)') {{stack}}
+            .col-md-6
+               .panel.panel-primary.details(ng-show="enableStackSkills")
+                  .panel-heading {{currentStack}}
+                     .panel-body
+                        div(ng-repeat=" s in getEnvForStack()") {{ s }}

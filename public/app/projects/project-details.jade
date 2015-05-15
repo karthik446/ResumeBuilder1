@@ -1,0 +1,24 @@
+.container
+   h1 {{project.clientName}}
+   .row
+      .col-md-6
+         h3 {{project.projectName}}
+         h4 {{project.role}}
+         p {{project.description}}
+      .col-md-6
+         .panel.panel-primary.env
+            .panel-heading Environments Used in the Project
+               .panel-body
+                  .row
+                     .col-md-6
+                        .row(ng-repeat="stack in project.stacks", ng-click='showStackSkills(stack)')
+                           button.btn.btn-primary.environments {{stack}}
+                     .col-md-6
+                        .panel.panel-primary.details(ng-show="enableStackSkills")
+                           .panel-heading {{currentStack}}
+                              .panel-body
+                                 div(ng-repeat=" s in getEnvForStack()") {{ s }}
+   .row
+      .col-md-12
+         h4.text-center Responsbilities
+

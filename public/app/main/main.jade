@@ -1,0 +1,13 @@
+.container
+    .jumbotron
+      h1 Karthik Saraswathibatla
+      p 9 years of IT experience in Analysis, Design, Development, Implementation and Testing of Web Based, Client-Server and N-tier Architecture in various domains
+        button.btn.btn-primary.text-center.more(ng-click='ShowSummary()') More...
+        p(ng-repeat="point in summary", ng-show="showcompleteSummary") {{point}}
+        button.btn.btn-primary.text-center.less(ng-click='HideSummary()') Less...
+
+    .row
+        .col-md-6
+            div(ng-include="'partials/main/featured-skills'")
+        .col-md-6
+            div(ng-include="'partials/main/featured-projects'")
