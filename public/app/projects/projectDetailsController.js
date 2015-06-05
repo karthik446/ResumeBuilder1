@@ -11,8 +11,9 @@ angular.module('app').controller('projectDetailsController',
     $scope.showStackSkills = function(stack){
         $scope.enableStackSkills = true;
         $scope.currentStack = stack;
-    }
+    };
+
     $scope.getEnvForStack = function(){
         return stacks.getEnvironmentsByStack($scope.currentStack);
-    }
+    };
 });

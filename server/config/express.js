@@ -1,4 +1,4 @@
-
+/// <reference path="../../typings/node/node.d.ts"/>
 var express = require("express"),
     stylus = require("stylus"),
     logger = require("morgan"),

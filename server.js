@@ -1,3 +1,9 @@
+
+/// <reference path="typings/express/express.d.ts"/>
+/// <reference path="typings/passport/passport.d.ts"/>
+/// <reference path="typings/passport/passport-local.d.ts"/>
+
+
 /**
  * Created by karthik on 5/11/2015.
  */
@@ -24,7 +30,7 @@ passport.use(new localStrategy(
             return user && user.authenticate(password)
                 ?  done(null, user)
                 : done(null, false);
-        })
+        });
     }
 ));
 

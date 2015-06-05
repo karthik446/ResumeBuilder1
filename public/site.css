@@ -36,3 +36,8 @@ footer p {
 .row .environments {
   padding: 10px;
 }
+@media (max-width: 970px) {
+  .env {
+    display: none;
+  }
+}

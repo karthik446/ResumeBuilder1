@@ -41,4 +41,4 @@ function populateExpertise(){
     })
 }
 
-exports.populateExpertise = populateExpertise();
+exports.populateExpertise = populateExpertise;
