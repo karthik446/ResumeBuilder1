@@ -1,8 +1,9 @@
 /**
- * Created by karthik on 5/15/2015.
+ * Created by karthik on 5/19/2015.
  */
+
 //save these in the database --- make an admin page to fill in these details
-angular.module('app').factory('summary',function(){
+angular.module('app').factory('experiences',function(){
     return {
         getSummary: function(){
             return [
